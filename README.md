@@ -1,4 +1,4 @@
-# BigQuerySchemaParser
+# BigQuery Schema Parser
 
 Google BigQuery Parser which transforms usual BigQuery JSON schema (both its representations - String and JsonObject) or
 QueryResponse into List of usual JsonElement for further processing. Each JSON element contains all fields and values
