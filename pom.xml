@@ -16,14 +16,12 @@
   -->
 
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.ailyenko</groupId>
     <artifactId>bigquery-schema-parser</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <licenses>
         <license>
@@ -37,7 +35,7 @@
         <url>https://github.com/ailyenko/bigquery-schema-parser.git</url>
         <connection>scm:git:ssh://git@github.com/ailyenko/bigquery-schema-parser.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ailyenko/bigquery-schema-parser.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>bigquery-schema-parser-1.0</tag>
     </scm>
 
     <distributionManagement>
@@ -60,20 +58,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-jgit</artifactId>
-                        <version>1.9.4</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
                 </configuration>
             </plugin>
             <plugin>
