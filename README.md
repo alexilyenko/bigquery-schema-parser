@@ -1,7 +1,7 @@
 # BigQuery Schema Parser
 
 Google BigQuery Parser which transforms usual BigQuery JSON schema (both its representations - String and JsonObject) or
-QueryResponse (Google BigQuery Java SDK) into List of usual JsonElement for further processing. Each JSON element contains all fields and values of the given row and can be mapped to a POJO object with the help of Gson library.
+QueryResponse (Google BigQuery Java SDK) into List of usual JsonElements for further processing. Each JsonElement object contains all fields and values of the given row and can be mapped to a POJO object with the help of Gson library.
 
 For example this kind of JSON:
 ```json
