@@ -6,7 +6,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.lang.reflect.Type;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -23,7 +22,7 @@ import static java.util.stream.Collectors.toList;
  * @see QueryResponse
  * @see JsonObject
  * @see JsonElement
- * @see com.google.gson.Gson#fromJson(JsonElement, Type)
+ * @see com.google.gson.Gson#fromJson(JsonElement, Class)
  * @see <a href="https://cloud.google.com/bigquery/docs/">Google BigQuery API Documentation</a>
  * @see <a href="https://cloud.google.com/bigquery/docs/reference/v2/jobs/getQueryResults">BigQuery getQueryResults Job</a>
  * @see <a href="https://cloud.google.com/bigquery/docs/reference/v2/jobs/query#response">BigQuery query Response</a>
