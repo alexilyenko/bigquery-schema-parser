@@ -22,6 +22,9 @@
     <groupId>com.github.ailyenko</groupId>
     <artifactId>bigquery-schema-parser</artifactId>
     <version>1.0</version>
+    <name>bigquery-schema-parser</name>
+    <description>Google BigQuery JSON Schema Parser</description>
+    <url>https://github.com/ailyenko/bigquery-schema-parser</url>
 
     <licenses>
         <license>
@@ -37,6 +40,15 @@
         <developerConnection>scm:git:git@github.com:ailyenko/bigquery-schema-parser.git</developerConnection>
         <url>http://github.com/ailyenko/bigquery-schema-parser</url>
     </scm>
+
+    <developers>
+        <developer>
+            <email>aleksey.ilyenko@gmail.com</email>
+            <name>Alex Ilyenko</name>
+            <url>https://github.com/ailyenko</url>
+            <id>ailyenko</id>
+        </developer>
+    </developers>
 
     <distributionManagement>
         <snapshotRepository>
