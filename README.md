@@ -50,3 +50,30 @@ will be transformed to the List\<JsonElement\>:
 [{"version":"9.3.3","platform":"ios"}, {"version":"4.4.4","platform":"android"}]
 ```
 
+**Uses Java 8.**
+
+## Maven dependency
+```xml
+<dependency>
+    <groupId>com.github.ailyenko</groupId>
+    <artifactId>bigquery-schema-parser</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+## Examples 
+```java
+// from QueryResponse:
+QueryResponse queryResponse = bigQuery.jobs().query(projectId, queryRequest).execute();
+List<JsonElement> rows = BigQuerySchemaParser.parse(queryResponse);
+
+// from JsonObject:
+JsonObject jsonObject = queryResponseJsonElement.getAsJsonObject();
+List<JsonElement> rows = BigQuerySchemaParser.parse(jsonObject);
+
+// from String:
+List<JsonElement> rows = BigQuerySchemaParser.parse(queryResponseJsonString);
+```
+
+##Development
+You're always welcome to create awesome pull requests!:beers:
