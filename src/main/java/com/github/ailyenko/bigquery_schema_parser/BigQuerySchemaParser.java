@@ -60,8 +60,8 @@ public class BigQuerySchemaParser {
     /**
      * Parses {@code JsonObject} representation of Google BigQuery {@code QueryResponse} or {@code GetQueryResultsResponse}
      * object into {@code List<JsonElement>}
-     * Field names are parsed sequentially but rows because of their potentially large number are parsed in parallel
-     * so their order is not guaranteed.
+     * Note: field names are parsed sequentially but rows because of their potentially large number are parsed in
+     * parallel so their order is not guaranteed.
      *
      * @param jsonObject representing given {@code JsonObject} received from Google BigQuery
      * @return List of JsonElements representing each row in the response
