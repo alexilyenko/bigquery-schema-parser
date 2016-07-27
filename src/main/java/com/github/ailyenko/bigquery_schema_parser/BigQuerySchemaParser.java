@@ -1,4 +1,4 @@
-package io.github.ailyenko.bigquery_schema_parser;
+package com.github.ailyenko.bigquery_schema_parser;
 
 import com.google.api.services.bigquery.model.QueryResponse;
 import com.google.gson.JsonArray;
