@@ -6,11 +6,14 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.math.BigInteger;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import static java.util.Objects.isNull;
 import static java.util.stream.Collectors.toList;
 
 /**
@@ -34,11 +37,14 @@ public class BigQuerySchemaParser {
      * Parses Google BigQuery {@code QueryResponse} object into {@code List<JsonElement>}
      *
      * @param queryResponse representing given response from Google BigQuery
-     * @return List of JsonElements representing each row in the response
+     * @return List of JsonElements representing each row in the response or empty List if no row were found
      * @see QueryResponse
      * @see #parse(String)
      */
     public static List<JsonElement> parse(QueryResponse queryResponse) {
+        if (isNull(queryResponse) || queryResponse.getTotalRows().equals(BigInteger.ZERO)) {
+            return Collections.emptyList();
+        }
         return parse(queryResponse.toString());
     }
 
@@ -47,11 +53,14 @@ public class BigQuerySchemaParser {
      * object into {@code List<JsonElement>}
      *
      * @param jsonString representing given {@code String} representation of the response from Google BigQuery
-     * @return List of JsonElements representing each row in the response
+     * @return List of JsonElements representing each row in the response or empty List if jsonString == null
      * @see QueryResponse
      * @see #parse(JsonObject)
      */
     public static List<JsonElement> parse(String jsonString) {
+        if (isNull(jsonString)) {
+            return Collections.emptyList();
+        }
         JsonObject json = PARSER.parse(jsonString).getAsJsonObject();
         return parse(json);
     }
@@ -63,11 +72,14 @@ public class BigQuerySchemaParser {
      * parallel so their order is not guaranteed.
      *
      * @param jsonObject representing given {@code JsonObject} received from Google BigQuery
-     * @return List of JsonElements representing each row in the response
+     * @return List of JsonElements representing each row in the response or empty List if no row were found
      * @see QueryResponse
      * @see #parse(JsonObject)
      */
     public static List<JsonElement> parse(JsonObject jsonObject) {
+        if (isNull(jsonObject) || jsonObject.get("totalRows").getAsInt() == 0) {
+            return Collections.emptyList();
+        }
         List<String> fieldNames = stream(jsonObject.getAsJsonObject("schema")
                 .getAsJsonArray("fields"), false)
                 .map(JsonElement::getAsJsonObject)
