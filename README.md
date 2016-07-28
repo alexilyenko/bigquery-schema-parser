@@ -1,5 +1,6 @@
 # BigQuery Schema Parser
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.ailyenko/bigquery-schema-parser/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.ailyenko/bigquery-schema-parser)
+[![Javadocs](http://www.javadoc.io/badge/com.github.ailyenko/bigquery-schema-parser.svg)](http://www.javadoc.io/doc/com.github.ailyenko/bigquery-schema-parser)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3ab51d2635c4b7288e3ee84c131ddea)](https://www.codacy.com/app/aleksey-ilyenko/bigquery-schema-parser?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ailyenko/bigquery-schema-parser&amp;utm_campaign=Badge_Grade)
 
 This is Google BigQuery Parser which transforms usual BigQuery JSON schema (both its representations - String and JsonObject) or
