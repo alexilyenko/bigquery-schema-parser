@@ -57,7 +57,7 @@ will be transformed to the List\<JsonElement\>:
 <dependency>
     <groupId>com.github.ailyenko</groupId>
     <artifactId>bigquery-schema-parser</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
