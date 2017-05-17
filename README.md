@@ -5,7 +5,8 @@
 
 Google BigQuery Parser is a small librarary which allows you to transform usual BigQuery JSON schema (both its representations - String and JsonObject) or
 QueryResponse (Google BigQuery Java SDK) into List of usual JsonElements for further processing. 
-Each JsonElement object in result contains all fields and values of the given row and can be mapped to a POJO object (e.g. with the help of Gson library).
+
+Each JsonElement object in result will contain all the fields and values of the given row and can be mapped to a POJO object (e.g. with the help of Gson library).
 
 For example this kind of JSON:
 ```json
