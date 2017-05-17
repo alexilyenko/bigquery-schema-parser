@@ -47,7 +47,7 @@ For example this kind of JSON:
   "totalRows" : "2"
 }
 ```
-will be transformed to the `List\<JsonElement\>`:
+will be transformed to the `List<JsonElement>`:
 ```java
 [{"version":"9.3.3","platform":"ios"}, {"version":"4.4.4","platform":"android"}]
 ```
