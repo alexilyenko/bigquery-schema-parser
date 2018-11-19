@@ -77,5 +77,5 @@ List<JsonElement> rows = BigQuerySchemaParser.parse(jsonObject);
 List<JsonElement> rows = BigQuerySchemaParser.parse(queryResponseJsonString);
 ```
 
-##Development
+## Development
 You're always welcomed to contribute to the project!:beers:
