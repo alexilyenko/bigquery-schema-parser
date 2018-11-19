@@ -78,4 +78,4 @@ List<JsonElement> rows = BigQuerySchemaParser.parse(queryResponseJsonString);
 ```
 
 ## Development
-You're always welcomed to contribute to the project!:beers:
+You're always welcome to contribute to the project!:beers:
