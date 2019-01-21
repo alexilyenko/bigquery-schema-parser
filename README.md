@@ -63,6 +63,12 @@ will be transformed to the `List<JsonElement>`:
 </dependency>
 ```
 
+## Gradle dependency
+```groovy
+compile 'com.github.ailyenko:bigquery-schema-parser:1.0.1'
+```
+
+
 ## Examples 
 ```java
 // from QueryResponse:
